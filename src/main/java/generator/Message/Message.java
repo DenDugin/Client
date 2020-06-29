@@ -12,20 +12,10 @@ public class Message {
     }
 
     private Integer target_id;
-
     private String data;
-
     private Integer client_id;
 
-    public Integer getClient_id() {
-        return client_id;
-    }
-
-    public void setClient_id(Integer client_id) {
-        this.client_id = client_id;
-    }
-
-    public Integer getId() {
+    public Integer getTarget_id() {
         return target_id;
     }
 
@@ -33,11 +23,19 @@ public class Message {
         return data;
     }
 
-    public void setId(Integer target_id) {
+    public Integer getClient_id() {
+        return client_id;
+    }
+
+    public void setTarget_id(Integer target_id) {
         this.target_id = target_id;
     }
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public void setClient_id(Integer client_id) {
+        this.client_id = client_id;
     }
 }

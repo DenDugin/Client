@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: /dev/Client/src/main/java
-Main-Class: generator.Main
-

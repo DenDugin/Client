@@ -13,8 +13,6 @@
     </properties>
 
 
-
-
     <dependencies>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
@@ -24,7 +22,7 @@
             <version>3.0.2.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
@@ -43,9 +41,8 @@
             <version>2.9.8</version>
         </dependency>
 
-
-
     </dependencies>
+
 
     <build>
         <finalName>dateutils</finalName>
@@ -65,8 +62,8 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
-                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <id>make-assembly</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
@@ -75,36 +72,36 @@
             </plugin>
 
 
-            <!-- Set a JDK compiler level -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                </configuration>
-            </plugin>
+<!--            &lt;!&ndash; Set a JDK compiler level &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>2.3.2</version>-->
+<!--                <configuration>-->
+<!--                    <source>${jdk.version}</source>-->
+<!--                    <target>${jdk.version}</target>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
             <!-- Make this jar executable -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
-                    <!-- DO NOT include log4j.properties file in your Jar -->
                     <excludes>
                         <exclude>**/log4j.properties</exclude>
                     </excludes>
                     <archive>
                         <manifest>
-                            <!-- Jar file entry point -->
                             <mainClass>generator.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
 
+
         </plugins>
+
     </build>
 
 
